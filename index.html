@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 평가 10.29</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>자바스크립트, 제이쿼리 정기평가</h1>
+        </header>
+        <section>
+            <table>
+                <caption>상품 슬라이드 테이블</caption> <!--표캡션생성-->
+                <thead></thead>
+                <tbody>
+                    <tr>
+                        <td id="screen" rowspan="4"><img src="images/big1.jpg" alt="원더쿠폰"></td>
+                        <!--클래스에 스페이스가 들어가면 클래스가 중복으로 적용가능함. 초기설정으로 빨간테두리를 원더쿠폰에만 적용해두려고 작업한 것.-->
+                        <td class="on thmb"><a href="images/big1.jpg"><img src="images/th1.png" alt="원더쿠폰"></a></td>
+                        <td class="thmb"><a href="images/big2.jpg"><img src="images/th2.png" alt="엔비룩"></a></td>
+                        <td class="thmb"><a href="images/big3.jpg"><img src="images/th3.png" alt="지오마"></a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="thmb"><a href="images/big4.jpg"><img src="images/th4.png" alt="베베쥬"></a></td>
+                        <td class="thmb"><a href="images/big5.jpg"><img src="images/th5.png" alt="LG 에어컨"></a></td>
+                        <td class="thmb"><a href="images/big6.jpg"><img src="images/th6.png" alt="쿠쿠 압력 밥솥"></a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="thmb"><a href="images/big7.jpg"><img src="images/th7.png" alt="텔레몬스터"></a></td>
+                        <td class="thmb"><a href="images/big8.jpg"><img src="images/th8.png" alt="슈퍼투데이특가"></a></td>
+                        <td class="thmb"><a href="images/big9.jpg"><img src="images/th9.png" alt="게릴라특가"></a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="3">
+                            <!-- 이전 다음 버튼 생성 -->
+                            <div class="prev"><a href="#">이전</a></div>
+                            <div class="next"><a href="#">다음</a></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p style="text-align: center; margin: 30px auto; font-size: 30px;">황 승 현</p>
+        </section>
+    </div>
+    <script src="js/function.js"></script>
+</body>
+</html>

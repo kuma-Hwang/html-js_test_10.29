@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+#wrap {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+header {
+    margin: 30px 0;
+    color:#777;
+}
+section>table {
+    border-collapse: collapse ; /*표 칸 모으기*/
+    text-align: center;
+}
+
+td {
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+caption {
+    padding: 20px;
+}
+
+#screen {
+    width: 647px;
+    height: 325px;
+}
+#screen>img {
+    display: block; 
+}
+td.thmb {
+    width: 95px;
+    height: 95px;
+}
+
+td.thmb>a {
+    display: block;
+    position: relative;
+    width: 95px;
+    height: 95px;
+    overflow: hidden; /*지정한 칸 너비를 넘어가는 사진을 숨김*/
+    background-image: url(../images/th1.png); /*배경사진 호출지정*/
+}
+
+td.thmb>a>img {
+    position: absolute; /*td.thmb>a 안 위치 설정*/
+    left: 0;
+    top: 0;
+}
+
+
+/*2장의 사진을 초기에 배치하여 테두리가 없는 메뉴사진 9종에 마우스를 올렸을 때 테두리가 있는 사진으로 위치 옮김. 간단히 hover로 테두리만 만들었어도 괜찮았을 듯*/
+td.thmb>a:hover>img,
+td.on>a>img {
+    top: -95px; 
+}
+
+tr:last-child>td>div>a {
+    text-indent: -9999px; /*text-indent = 시각적으로 글자는 숨기고 버튼으로 나타내려고 쓰는 것*/
+}
+
+.prev {
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #ccc transparent transparent;
+    /*위 아래 오른쪽을 투명처리하여 왼쪽을 향하는 삼각형을 만듦*/
+    border-left: none;
+    content: '';
+}
+
+.prev>a {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 20px;
+    left: 0;
+    top: -10px;
+}
+
+.next {
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #ccc;
+    /*위 왼쪽 아래를 투명처리하여 오른쪽을 향하는 삼각형을 만듦*/ 
+    border-right: none;
+    content: '';
+}
+
+.next>a {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 20px;
+    left: -10px;
+    top: -10px;
+}
+
+.prev:hover{
+	border-color:transparent red transparent transparent;
+}
+.next:hover{
+	border-color: transparent transparent transparent red;
+}
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+@charset "utf-8"; /*인코딩 방식을 html과 맞추기 */
+
+/* 웹폰트: 접속하면 구글이 동적으로 폰트를 사용할 수 있게 해줌 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* CSS Reset */
+
+html,body {
+    width: 100%; height: 100%;
+}
+
+/*해설에는 일일히 다 지정했지만 그냥 전체설정으로 하는것이 편할거 같아서 *을 사용함*/
+* {margin: 0; padding: 0; border: 0;}
+
+/* 표 칸모으기 기본 설정 */
+table{border-collapse: collapse;}
+
+/* 목차 스타일 없음 설정 있으면 생성될 때마다 기호가 붙음*/
+ul,ol,li {list-style: none;}
+
+/* 폰트굵기설정 */
+address,em {font-style: normal;}
+
+/* 캡션등 도움말 숨김설정 */
+legend,caption,hr {display: none;}
+
+/* 테두리 선 스타일 없음 설정 */
+fieldset, img { border: none;} 
+
+
+textarea {resize: none;} 
+q{quotes: none;} /*쌍따옴표 제거*/
+
+/* a에 대한 (불러오기 설정 및 동작)색상 설정, 기본 밑줄 제거 */
+a:link, a:visited, a:hover, a:active {
+    color: #222;
+    text-decoration: none;
+}
+
+body {
+    overflow-y: scroll; /*y축으로 넘어가는 자료는 스크롤로 표시*/
+    color: #223;
+    font-weight: 300; /*글자두께설정*/
+    font-size: 13px;
+    font-family: 'Noto Sans KR',돋움;
+}
+
+/*글자 정중앙 배치*/
+.text-center {
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+
+
+/* 화면에 보이지는 않지만 시각장애인을 위한 screen reader는 글을 읽을수 있다. (처음 배우는 것)*/
+.sr-only {
+    position: absolute;
+    left: -9999px;
+}
+
+.blind {display: none;}
+
+/* 부모 요소가 자식 플로트 요소의 높이를 올바르게 계산할 수 있도록 도와줌 */
+.clearfix {*zoom:1;}
+.clearfix:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
